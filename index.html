@@ -1,232 +1,271 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>GUTECH TI | Software, páginas web y sistemas de stock</title>
-  <meta name="description" content="GUTECH TI desarrolla páginas web, sistemas de gestión, control de stock y software a medida para empresas.">
-  <meta name="theme-color" content="#06202e">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>GUTECH TI | Software, páginas web y sistemas de gestión</title>
+  <meta name="description" content="Creamos páginas web, sistemas de gestión, control de stock y software a medida para empresas y emprendedores en Paraguay.">
+  <meta name="theme-color" content="#061d2b">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_PY">
-  <meta property="og:title" content="GUTECH TI | Software y soluciones para empresas">
-  <meta property="og:description" content="Páginas web, sistemas de gestión, control de stock y software a medida.">
+  <meta property="og:title" content="GUTECH TI | Tecnología para hacer crecer tu negocio">
+  <meta property="og:description" content="Páginas web, sistemas de gestión, stock y software a medida con acompañamiento cercano.">
   <meta property="og:url" content="https://gutechti.com/">
+  <meta property="og:image" content="https://gutechti.com/assets/GUTECH_TI_logo_sin_fondo.png?v=be18a931">
   <link rel="canonical" href="https://gutechti.com/">
   <link rel="icon" type="image/svg+xml" href="favicon.svg?v=3070a1b4">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#f6f9fb;--card:#fff;--ink:#0a2230;--mute:#4d6573;--blue:#036a96;--cyan:#00b8e6;--red:#e8141c;--navy:#06202e;--line:#d6e2ea;box-sizing:border-box;padding-top:env(safe-area-inset-top,0);padding-bottom:env(safe-area-inset-bottom,0)}
-    @media(prefers-color-scheme:dark){:root{--bg:#08151d;--card:#0e2230;--ink:#eaf4f9;--mute:#9db5c3;--blue:#38b6e6;--line:#1c3a4c}}
+    :root{--navy:#061d2b;--navy2:#0a3048;--blue:#007da8;--cyan:#00b7df;--red:#ed1720;--paper:#f5f9fc;--white:#fff;--ink:#092433;--muted:#506a78;--line:#d8e5ec;--soft:#eaf6fb;--shadow:0 22px 60px rgba(6,29,43,.12);box-sizing:border-box}
     *,*::before,*::after{box-sizing:inherit}
-    html{scroll-behavior:smooth;scroll-padding-top:76px}
-    body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Figtree,system-ui,sans-serif}
-    h1,h2,h3{font-family:"Chakra Petch",system-ui,sans-serif;line-height:1.1;margin:0}
-    a{color:inherit}
-    :focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
-    .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-    header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-    header .wrap{display:flex;align-items:center;justify-content:space-between;height:110px;gap:24px}
-    .logo{display:block;flex:none}
-    .logo img{display:block;width:290px;height:104px;object-fit:contain}
-    nav{display:flex;align-items:center;gap:24px;font-weight:600}
-    nav a{text-decoration:none;color:var(--mute)}
-    nav a:hover{color:var(--blue)}
-    .btn{display:inline-block;border:0;border-radius:7px;background:var(--red);color:#fff;padding:13px 24px;text-decoration:none;font:600 16px "Chakra Petch",sans-serif;cursor:pointer;transition:transform .2s,background .2s}
-    .btn:hover{background:#c40f16;transform:translateY(-2px)}
-    .btn.alt{background:transparent;color:var(--blue);border:2px solid var(--blue)}
-    .btn.alt:hover{background:var(--blue);color:#fff}
-    .hero{padding:72px 0 64px}
-    .hero .wrap{display:grid;grid-template-columns:1.08fr .92fr;gap:52px;align-items:center}
-    .kicker{margin:0 0 14px;color:var(--blue);font:700 14px "Chakra Petch",sans-serif;letter-spacing:.14em;text-transform:uppercase}
-    h1{font-size:clamp(38px,5.4vw,64px);font-weight:700;letter-spacing:-.02em}
-    .hero p:not(.kicker){max-width:49ch;margin:22px 0 30px;color:var(--mute);font-size:19px}
-    .cta{display:flex;gap:12px;flex-wrap:wrap}
-    .hero-card{position:relative;min-height:590px;display:grid;place-items:center;border:0;border-radius:0;background:transparent;box-shadow:none;overflow:visible}
-    .hero-card::before,.hero-card::after{display:none}
-    .hero-card::before{width:240px;height:240px;right:-80px;top:-70px;background:rgba(0,184,230,.18)}
-    .hero-card::after{width:170px;height:170px;left:-60px;bottom:-50px;background:rgba(232,20,28,.12)}
-    .hero-logo{position:relative;z-index:1;width:min(128%,780px);max-width:none;height:auto;filter:drop-shadow(0 18px 30px rgba(6,32,46,.18))}
-    section{padding:72px 0}
-    .alt-bg{background:var(--card);border-block:1px solid var(--line)}
-    h2{font-size:clamp(30px,3.8vw,44px);margin-bottom:12px}
-    .lead{max-width:58ch;margin:0 0 36px;color:var(--mute)}
-    .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
-    .tab{border:2px solid var(--line);border-radius:7px;background:transparent;color:var(--ink);padding:10px 18px;font:600 16px "Chakra Petch",sans-serif;cursor:pointer}
-    .tab[aria-selected="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
-    .panel{display:none;border-left:8px solid var(--blue);padding:8px 0 8px 26px}
-    .panel.on{display:block}
-    .panel h3{font-size:28px;margin-bottom:10px}
-    .panel p{max-width:64ch;margin:0 0 14px;color:var(--mute)}
-    .panel ul{margin:0;padding-left:20px;columns:2;column-gap:36px}
-    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:steps;margin:0;padding:0;list-style:none}
-    .steps li{counter-increment:steps;padding:22px 24px 0 0;border-top:4px solid var(--blue)}
-    .steps li:last-child{border-top-color:var(--red)}
-    .steps li::before{content:counter(steps,decimal-leading-zero);display:block;color:var(--blue);font:700 30px "Chakra Petch",sans-serif}
-    .steps h3{font-size:20px;margin:5px 0 7px}
-    .steps p{margin:0;color:var(--mute);font-size:15px}
-    .contact{background:var(--navy);color:#e9f5fa}
-    .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:52px}
-    .contact .lead{color:#9fc0d0}
-    .tel{display:block;margin:8px 0;color:#fff;text-decoration:none;font:700 clamp(30px,4vw,44px) "Chakra Petch",sans-serif}
-    form{display:grid;gap:12px}
-    label{font-weight:500;font-size:15px}
-    input,select,textarea{width:100%;margin-top:5px;padding:12px;border:1px solid #1f4d68;border-radius:7px;background:#0b2c3f;color:#fff;font:inherit}
-    textarea{min-height:100px;resize:vertical}
-    footer{background:#041621;color:#8fb2c4;padding:23px 0;font-size:14px}
-    footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-    footer a{color:#fff}
-    .wa{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:20;border-radius:99px;background:#1fa855;color:#fff;padding:12px 18px;text-decoration:none;font:600 15px Figtree,sans-serif;box-shadow:0 8px 24px rgba(0,0,0,.3)}
-    @media(max-width:860px){
-      .hero .wrap,.contact .wrap{grid-template-columns:1fr}
-      .hero-card{min-height:490px}
-      .steps{grid-template-columns:1fr 1fr;gap:28px}
-      nav a:not(.btn){display:none}
-      .panel ul{columns:1}
-      .hero,section{padding:52px 0}
+    html{scroll-behavior:smooth;scroll-padding-top:112px}
+    body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.65 Figtree,system-ui,sans-serif}
+    h1,h2,h3{font-family:"Chakra Petch",system-ui,sans-serif;line-height:1.08;margin:0;letter-spacing:-.02em}
+    p{margin-top:0} a{color:inherit} img{max-width:100%}
+    :focus-visible{outline:3px solid var(--cyan);outline-offset:4px}
+    .skip{position:fixed;left:12px;top:-70px;z-index:100;background:#fff;padding:10px 16px;border-radius:8px}
+    .skip:focus{top:12px}
+    .wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .eyebrow{margin:0 0 14px;color:var(--blue);font:700 13px/1.2 "Chakra Petch";letter-spacing:.15em;text-transform:uppercase}
+    .section-title{font-size:clamp(34px,4.4vw,54px);max-width:790px}
+    .section-lead{max-width:680px;color:var(--muted);font-size:19px;margin:16px 0 38px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:52px;border:2px solid transparent;border-radius:10px;padding:13px 22px;background:var(--red);color:#fff;text-decoration:none;font:700 16px "Chakra Petch";cursor:pointer;box-shadow:0 10px 24px rgba(237,23,32,.18);transition:.2s ease}
+    .btn:hover{transform:translateY(-2px);background:#c90e16}
+    .btn.secondary{background:transparent;border-color:var(--blue);color:var(--blue);box-shadow:none}
+    .btn.secondary:hover{background:var(--blue);color:#fff}
+    .btn.light{background:#fff;color:var(--navy);box-shadow:none}
+    header{position:sticky;top:0;z-index:50;background:rgba(245,249,252,.9);border-bottom:1px solid rgba(216,229,236,.9);backdrop-filter:blur(16px)}
+    .nav-wrap{min-height:104px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .brand{display:block;flex:0 0 auto}
+    .brand img{display:block;width:290px;height:100px;object-fit:contain}
+    nav{display:flex;align-items:center;gap:26px;font-weight:700}
+    nav>a:not(.btn){color:var(--muted);text-decoration:none}
+    nav>a:not(.btn):hover{color:var(--blue)}
+    .menu{display:none;border:1px solid var(--line);background:#fff;color:var(--navy);border-radius:9px;width:48px;height:48px;font-size:24px}
+    main{overflow:hidden}
+    .hero{padding:78px 0 64px;background:radial-gradient(circle at 85% 28%,rgba(0,183,223,.12),transparent 30%),linear-gradient(180deg,#f8fbfd 0%,var(--paper) 100%)}
+    .hero-grid{display:grid;grid-template-columns:1.04fr .96fr;align-items:center;gap:32px}
+    h1{font-size:clamp(48px,6vw,78px);max-width:770px}
+    .hero-copy>p:not(.eyebrow){font-size:20px;color:var(--muted);max-width:610px;margin:24px 0 30px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-notes{display:flex;gap:18px;flex-wrap:wrap;margin-top:26px;color:var(--muted);font-size:14px;font-weight:700}
+    .hero-notes span::before{content:"✓";color:var(--blue);margin-right:7px}
+    .hero-visual{min-height:590px;display:grid;place-items:center;background:transparent}
+    .hero-logo{width:min(132%,820px);max-width:none;height:auto;filter:drop-shadow(0 20px 30px rgba(6,29,43,.18))}
+    .trust{background:var(--navy);color:#fff}
+    .trust-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+    .trust-item{padding:25px 30px;border-right:1px solid rgba(255,255,255,.15)}
+    .trust-item:last-child{border:0}
+    .trust-item strong{display:block;font:700 19px "Chakra Petch";margin-bottom:4px}
+    .trust-item span{color:#bcd0db;font-size:15px}
+    section{padding:92px 0}
+    .service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .service{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px;min-height:280px;box-shadow:0 12px 35px rgba(6,29,43,.06);transition:.22s ease}
+    .service:hover{transform:translateY(-5px);border-color:#9dd8e9;box-shadow:var(--shadow)}
+    .service::after{content:"";position:absolute;width:120px;height:120px;border-radius:50%;right:-55px;bottom:-55px;background:rgba(0,183,223,.08)}
+    .service-icon{width:54px;height:54px;display:grid;place-items:center;border-radius:14px;background:var(--soft);color:var(--blue);font:700 18px "Chakra Petch";margin-bottom:23px}
+    .service h3{font-size:27px;margin-bottom:12px}
+    .service p{color:var(--muted);margin:0 0 16px}
+    .service ul{margin:0;padding-left:20px;color:var(--muted)}
+    .service li{margin:5px 0}
+    .showcase{background:var(--navy);color:#fff}
+    .showcase .eyebrow{color:#57d5f2}.showcase .section-lead{color:#bdd1dc}
+    .solution-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:20px}
+    .solution-main,.solution-side{border:1px solid rgba(255,255,255,.14);border-radius:20px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.03));padding:34px}
+    .solution-main{min-height:370px;display:flex;flex-direction:column;justify-content:space-between}
+    .mock{display:grid;grid-template-columns:110px 1fr;gap:18px;margin-top:28px}
+    .mock-menu{border-radius:12px;background:#08273b;padding:15px}
+    .mock-menu i{display:block;height:8px;border-radius:4px;background:#28526b;margin:11px 0}
+    .mock-screen{border-radius:12px;background:#f4fbfe;padding:20px;color:var(--ink)}
+    .mock-line{height:11px;background:#d3e7ef;border-radius:7px;margin:10px 0}
+    .mock-line.red{width:40%;background:#f18b90}.mock-line.blue{width:72%;background:#70cbe2}
+    .solution-side{display:grid;align-content:center;gap:22px}
+    .mini-result{padding:20px;border-left:4px solid var(--cyan);background:rgba(0,0,0,.12);border-radius:8px}
+    .mini-result strong{display:block;font:700 21px "Chakra Petch";margin-bottom:4px}
+    .mini-result span{color:#bdd1dc}
+    .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+    .step{position:relative;padding:28px 22px;background:#fff;border:1px solid var(--line);border-radius:16px}
+    .step-num{font:700 38px "Chakra Petch";color:#c8e7f1}
+    .step h3{font-size:23px;margin:8px 0}.step p{color:var(--muted);margin:0}
+    .faq{background:#fff;border-block:1px solid var(--line)}
+    .faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:52px;align-items:start}
+    details{border-bottom:1px solid var(--line);padding:20px 0}
+    summary{cursor:pointer;font:700 19px "Chakra Petch";list-style:none;padding-right:34px;position:relative}
+    summary::after{content:"+";position:absolute;right:4px;top:-3px;font-size:27px;color:var(--blue)}
+    details[open] summary::after{content:"−"}
+    details p{margin:12px 36px 0 0;color:var(--muted)}
+    .contact{background:linear-gradient(135deg,#062234,#0a3d59);color:#fff}
+    .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:54px;align-items:center}
+    .contact .eyebrow{color:#6ee0f6}.contact .section-lead{color:#c1d6df}
+    .contact-list{display:grid;gap:12px}
+    .contact-list a{text-decoration:none;color:#fff;font-weight:700}
+    form{display:grid;gap:16px;background:#fff;color:var(--ink);padding:30px;border-radius:20px;box-shadow:var(--shadow)}
+    label{font-weight:700;font-size:15px}
+    input,select,textarea{width:100%;margin-top:7px;border:1px solid #c8d9e2;border-radius:9px;background:#f9fcfd;color:var(--ink);padding:13px;font:inherit}
+    textarea{min-height:120px;resize:vertical}
+    footer{background:#04151f;color:#aac1cd;padding:30px 0}
+    .footer-grid{display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .footer-brand{font:700 21px "Chakra Petch";color:#fff}
+    .wa{position:fixed;z-index:40;right:20px;bottom:20px;display:flex;align-items:center;gap:9px;background:#19ab55;color:#fff;text-decoration:none;font-weight:800;padding:14px 18px;border-radius:999px;box-shadow:0 12px 30px rgba(0,0,0,.2)}
+    @media(max-width:920px){
+      .hero-grid,.solution-grid,.faq-grid,.contact-grid{grid-template-columns:1fr}
+      .hero{padding-top:52px}.hero-copy{text-align:center}.hero-copy>p:not(.eyebrow){margin-inline:auto}.hero-actions,.hero-notes{justify-content:center}
+      .hero-visual{min-height:470px}.hero-logo{width:min(112%,720px)}
+      .process-grid{grid-template-columns:repeat(2,1fr)}
+      nav{position:absolute;left:20px;right:20px;top:92px;display:none;flex-direction:column;align-items:stretch;padding:20px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
+      nav.open{display:flex}.menu{display:block}.nav-wrap{min-height:92px}.brand img{width:210px;height:84px}
     }
-    @media(max-width:540px){
-      .logo img{width:195px;height:82px}
-      header .wrap{height:92px}
-      nav .btn{padding:10px 14px;font-size:14px}
-      .steps{grid-template-columns:1fr}
-      .hero{padding-top:42px}
-      .hero-card{min-height:410px}
-      .wa{right:12px;bottom:12px}
+    @media(max-width:620px){
+      .wrap{width:min(100% - 28px,1180px)}
+      body{font-size:16px}.hero{padding-top:40px}h1{font-size:clamp(40px,12vw,56px)}
+      .brand img{width:188px;height:80px}.nav-wrap{min-height:88px}
+      .hero-visual{min-height:400px}.hero-logo{width:125%}
+      .trust-grid,.service-grid,.process-grid{grid-template-columns:1fr}
+      .trust-item{border-right:0;border-bottom:1px solid rgba(255,255,255,.15)}
+      section{padding:70px 0}.service{padding:24px;min-height:auto}
+      .mock{grid-template-columns:78px 1fr}.solution-main,.solution-side{padding:24px}
+      .footer-grid{align-items:flex-start;flex-direction:column}.wa span{display:none}.wa{width:56px;height:56px;justify-content:center;padding:0;font-size:22px}
     }
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.service{transition:none}}
   </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ProfessionalService","name":"GUTECH TI","url":"https://gutechti.com/","telephone":"+595985676607","areaServed":"Paraguay","description":"Páginas web, sistemas de gestión, control de stock y software a medida."}
+  </script>
 </head>
 <body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
   <header>
-    <div class="wrap">
-      <a class="logo" href="#inicio" aria-label="GUTECH TI, inicio">
-        <img src="https://gutechti.com/assets/GUTECH_TI_logo_sin_fondo.png?v=be18a931" alt="GUTECH TI">
-      </a>
+    <div class="wrap nav-wrap">
+      <a class="brand" href="#inicio" aria-label="GUTECH TI, inicio"><img src="https://gutechti.com/assets/GUTECH_TI_logo_sin_fondo.png?v=be18a931" alt="GUTECH TI" width="290" height="100"></a>
+      <button class="menu" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
       <nav aria-label="Navegación principal">
         <a href="#servicios">Servicios</a>
+        <a href="#soluciones">Soluciones</a>
         <a href="#proceso">Cómo trabajamos</a>
-        <a class="btn" href="#contacto">Cotizar ahora</a>
+        <a href="#preguntas">Preguntas</a>
+        <a class="btn" href="#contacto">Cotizar proyecto</a>
       </nav>
     </div>
   </header>
 
-  <main id="inicio">
-    <section class="hero">
-      <div class="wrap">
-        <div>
-          <p class="kicker">Tecnología para hacer crecer tu negocio</p>
-          <h1>Software a tu medida para vender más y controlar tu stock</h1>
-          <p>En GUTECH TI desarrollamos páginas web, sistemas de gestión y control de inventario para que tu negocio atienda mejor, venda más y deje de perder tiempo en planillas.</p>
-          <div class="cta">
-            <a class="btn" href="#contacto">Pedir cotización gratis</a>
-            <a class="btn alt" href="https://wa.me/595985676607" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+  <main id="contenido">
+    <section class="hero" id="inicio">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Tecnología clara para negocios reales</p>
+          <h1>Tu negocio puede vender más y trabajar mejor.</h1>
+          <p>Diseñamos páginas web y sistemas que ordenan ventas, stock y operaciones. Soluciones simples de usar, pensadas para crecer con tu empresa.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#contacto">Pedir cotización</a>
+            <a class="btn secondary" href="https://wa.me/595985676607" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+          </div>
+          <div class="hero-notes" aria-label="Beneficios">
+            <span>Atención personalizada</span><span>Diseño adaptable</span><span>Soporte cercano</span>
           </div>
         </div>
-        <div class="hero-card" aria-label="Identidad visual de GUTECH TI">
-          <img class="hero-logo" src="https://gutechti.com/assets/GUTECH_TI_logo_sin_fondo.png?v=be18a931" alt="Logo de GUTECH TI">
+        <div class="hero-visual" aria-label="Identidad de GUTECH TI">
+          <img class="hero-logo" src="https://gutechti.com/assets/GUTECH_TI_logo_sin_fondo.png?v=be18a931" alt="Logo de GUTECH TI" width="820" height="547">
         </div>
       </div>
     </section>
 
-    <section id="servicios" class="alt-bg">
+    <div class="trust" aria-label="Propuesta de valor">
+      <div class="wrap trust-grid">
+        <div class="trust-item"><strong>Soluciones a medida</strong><span>La tecnología se adapta a tu negocio.</span></div>
+        <div class="trust-item"><strong>Un solo equipo</strong><span>Diseño, desarrollo y acompañamiento.</span></div>
+        <div class="trust-item"><strong>Preparado para crecer</strong><span>Base clara, rápida y mantenible.</span></div>
+      </div>
+    </div>
+
+    <section id="servicios">
       <div class="wrap">
-        <h2>Lo que construimos para tu negocio</h2>
-        <p class="lead">Elegí un servicio para ver qué incluye.</p>
-        <div class="tabs" role="tablist" aria-label="Servicios">
-          <button class="tab" type="button" role="tab" aria-selected="true" aria-controls="p1" id="t1">Páginas web</button>
-          <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="p2" id="t2">Sistemas de gestión</button>
-          <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="p3" id="t3">Control de stock</button>
-          <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="p4" id="t4">Software a medida</button>
+        <p class="eyebrow">Servicios</p>
+        <h2 class="section-title">Tecnología que resuelve tareas concretas.</h2>
+        <p class="section-lead">Elegí el punto de partida. Podemos desarrollar una solución específica o combinar varias áreas en un mismo proyecto.</p>
+        <div class="service-grid">
+          <article class="service"><div class="service-icon">WEB</div><h3>Páginas web profesionales</h3><p>Una presencia digital rápida, clara y preparada para convertir visitas en consultas.</p><ul><li>Diseño adaptable a celulares</li><li>Dominio, HTTPS y SEO técnico</li><li>WhatsApp y formularios de contacto</li></ul></article>
+          <article class="service"><div class="service-icon">SYS</div><h3>Sistemas de gestión</h3><p>Centralizá información y reducí el trabajo repetitivo de tu operación diaria.</p><ul><li>Ventas, clientes y proveedores</li><li>Reportes para tomar decisiones</li><li>Acceso según perfiles de usuario</li></ul></article>
+          <article class="service"><div class="service-icon">STK</div><h3>Control de stock</h3><p>Conocé existencias y movimientos para evitar faltantes, pérdidas y planillas dispersas.</p><ul><li>Entradas, salidas y ajustes</li><li>Alertas y trazabilidad</li><li>Información en tiempo real</li></ul></article>
+          <article class="service"><div class="service-icon">DEV</div><h3>Software a medida</h3><p>Construimos herramientas alrededor de la forma real en que trabaja tu empresa.</p><ul><li>Procesos personalizados</li><li>Automatización de tareas</li><li>Evolución por etapas</li></ul></article>
         </div>
-        <div class="panel on" role="tabpanel" id="p1" aria-labelledby="t1">
-          <h3>Páginas web que consiguen clientes</h3>
-          <p>Sitios rápidos, modernos y pensados para que el visitante te escriba o te compre.</p>
-          <ul><li>Diseño adaptado a celular</li><li>Botón directo a WhatsApp</li><li>Tienda en línea</li><li>Posicionamiento en Google</li></ul>
-        </div>
-        <div class="panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
-          <h3>Gestioná todo desde un solo lugar</h3>
-          <p>Ventas, clientes, facturación y reportes en un sistema simple para tu equipo.</p>
-          <ul><li>Registro de clientes y proveedores</li><li>Facturación y cobros</li><li>Reportes de ventas</li><li>Usuarios con permisos</li></ul>
-        </div>
-        <div class="panel" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
-          <h3>Sabé qué tenés, siempre</h3>
-          <p>Inventario al día en tiempo real, con avisos cuando un producto se está acabando.</p>
-          <ul><li>Entradas y salidas de productos</li><li>Alertas de stock bajo</li><li>Varias bodegas o sucursales</li><li>Códigos de barras</li></ul>
-        </div>
-        <div class="panel" role="tabpanel" id="p4" aria-labelledby="t4" hidden>
-          <h3>Una solución hecha para vos</h3>
-          <p>Si tu proceso es único, creamos el programa exacto que necesitás, sin pagar por funciones que no usás.</p>
-          <ul><li>Aplicaciones web y móviles</li><li>Integración con tus sistemas</li><li>Automatización de tareas</li><li>Soporte y mejoras continuas</li></ul>
+      </div>
+    </section>
+
+    <section class="showcase" id="soluciones">
+      <div class="wrap">
+        <p class="eyebrow">De la idea al trabajo diario</p>
+        <h2 class="section-title">Menos desorden. Más control.</h2>
+        <p class="section-lead">Una buena solución no solo se ve bien: ayuda a encontrar información, actuar rápido y atender mejor.</p>
+        <div class="solution-grid">
+          <div class="solution-main">
+            <div><h3 style="font-size:32px">Todo lo importante, en una vista clara.</h3><p style="color:#bdd1dc;max-width:620px">Organizamos módulos, indicadores y acciones para que tu equipo sepa qué hacer sin perder tiempo.</p></div>
+            <div class="mock" aria-hidden="true"><div class="mock-menu"><i></i><i></i><i></i><i></i></div><div class="mock-screen"><strong>Resumen del negocio</strong><div class="mock-line blue"></div><div class="mock-line"></div><div class="mock-line red"></div><div class="mock-line"></div></div></div>
+          </div>
+          <div class="solution-side">
+            <div class="mini-result"><strong>Vendé mejor</strong><span>Una web que explica y facilita el contacto.</span></div>
+            <div class="mini-result"><strong>Trabajá ordenado</strong><span>Procesos e información en un mismo lugar.</span></div>
+            <div class="mini-result"><strong>Decidí con datos</strong><span>Reportes claros para seguir el negocio.</span></div>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="proceso">
       <div class="wrap">
-        <h2>Así trabajamos contigo</h2>
-        <p class="lead">Un proceso claro, sin sorpresas en tiempo ni precio.</p>
-        <ol class="steps">
-          <li><h3>Conversamos</h3><p>Entendemos tu negocio y lo que necesitás resolver.</p></li>
-          <li><h3>Diseñamos</h3><p>Te mostramos una propuesta y una cotización clara.</p></li>
-          <li><h3>Desarrollamos</h3><p>Construimos y te vamos mostrando avances.</p></li>
-          <li><h3>Entregamos</h3><p>Te capacitamos y damos soporte después del lanzamiento.</p></li>
-        </ol>
+        <p class="eyebrow">Cómo trabajamos</p>
+        <h2 class="section-title">Un proceso simple, con vos en cada etapa.</h2>
+        <p class="section-lead">Definimos prioridades primero y avanzamos con entregas claras para que siempre sepas en qué estado está tu proyecto.</p>
+        <div class="process-grid">
+          <article class="step"><span class="step-num">01</span><h3>Conversamos</h3><p>Entendemos tu negocio, el problema y el resultado que buscás.</p></article>
+          <article class="step"><span class="step-num">02</span><h3>Diseñamos</h3><p>Ordenamos la solución, las pantallas y el recorrido del usuario.</p></article>
+          <article class="step"><span class="step-num">03</span><h3>Desarrollamos</h3><p>Construimos y probamos por etapas para incorporar tus comentarios.</p></article>
+          <article class="step"><span class="step-num">04</span><h3>Entregamos</h3><p>Publicamos, explicamos el uso y acompañamos la puesta en marcha.</p></article>
+        </div>
       </div>
     </section>
 
-    <section id="contacto" class="contact">
-      <div class="wrap">
+    <section class="faq" id="preguntas">
+      <div class="wrap faq-grid">
+        <div><p class="eyebrow">Preguntas frecuentes</p><h2 class="section-title">Antes de comenzar.</h2><p class="section-lead">Estas respuestas ayudan a definir el primer paso. Para una recomendación concreta, contanos tu necesidad.</p></div>
         <div>
-          <h2>Contanos qué necesitás</h2>
-          <p class="lead">Te respondemos con una cotización sin compromiso.</p>
-          <a class="tel" href="tel:+595985676607">0985 676 607</a>
-          <p class="lead" style="margin:0">Llamanos o escribinos por WhatsApp.</p>
+          <details><summary>¿Trabajan con negocios pequeños?</summary><p>Sí. El alcance se define según la necesidad real y puede crecer por etapas.</p></details>
+          <details><summary>¿La página funciona en celulares?</summary><p>Sí. Diseñamos la experiencia para computadoras, tabletas y teléfonos.</p></details>
+          <details><summary>¿Pueden crear un sistema específico para mi empresa?</summary><p>Sí. Primero relevamos el proceso y luego proponemos una solución adaptada.</p></details>
+          <details><summary>¿Cómo solicito un presupuesto?</summary><p>Completá el formulario o escribinos por WhatsApp. Con una breve descripción podremos orientarte sobre los siguientes pasos.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contacto">
+      <div class="wrap contact-grid">
+        <div>
+          <p class="eyebrow">Hablemos de tu proyecto</p>
+          <h2 class="section-title">Contanos qué querés mejorar.</h2>
+          <p class="section-lead">Explicanos brevemente tu necesidad y te responderemos para organizar el siguiente paso.</p>
+          <div class="contact-list">
+            <a href="https://wa.me/595985676607" target="_blank" rel="noopener">WhatsApp: +595 985 676 607</a>
+            <a href="tel:+595985676607">Llamar al +595 985 676 607</a>
+          </div>
         </div>
         <form id="contact-form">
-          <label>Tu nombre<input name="nombre" required autocomplete="name"></label>
-          <label>¿Qué necesitás?
-            <select name="servicio">
-              <option>Una página web</option>
-              <option>Un sistema de gestión</option>
-              <option>Control de stock</option>
-              <option>Software a medida</option>
-            </select>
-          </label>
-          <label>Mensaje<textarea name="mensaje" placeholder="Contanos brevemente sobre tu negocio"></textarea></label>
-          <button class="btn" type="submit">Enviar por WhatsApp</button>
+          <label>Tu nombre<input name="nombre" required autocomplete="name" placeholder="Nombre y apellido"></label>
+          <label>¿Qué necesitás?<select name="servicio"><option>Una página web</option><option>Un sistema de gestión</option><option>Control de stock</option><option>Software a medida</option><option>Quiero asesoramiento</option></select></label>
+          <label>Mensaje<textarea name="mensaje" placeholder="Contanos sobre tu negocio y qué querés resolver"></textarea></label>
+          <button class="btn" type="submit">Enviar consulta por WhatsApp</button>
         </form>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="wrap">
-      <span>© <span id="year"></span> GUTECH TI. Desarrollo de software.</span>
-      <a href="tel:+595985676607">0985 676 607</a>
-    </div>
-  </footer>
-
-  <a class="wa" href="https://wa.me/595985676607" target="_blank" rel="noopener" aria-label="Escribir a GUTECH TI por WhatsApp">WhatsApp</a>
-
+  <footer><div class="wrap footer-grid"><div><div class="footer-brand">GUTECH TI</div><div>Tecnología para hacer crecer tu negocio.</div></div><div>© <span id="year"></span> GUTECH TI · Paraguay</div></div></footer>
+  <a class="wa" href="https://wa.me/595985676607" target="_blank" rel="noopener" aria-label="Escribir a GUTECH TI por WhatsApp">● <span>WhatsApp</span></a>
   <script>
-    const tabs=[...document.querySelectorAll(".tab")];
-    tabs.forEach(tab=>tab.addEventListener("click",()=>{
-      tabs.forEach(item=>{
-        const active=item===tab;
-        item.setAttribute("aria-selected",String(active));
-        const panel=document.getElementById(item.getAttribute("aria-controls"));
-        panel.classList.toggle("on",active);
-        panel.hidden=!active;
-      });
-    }));
-    document.getElementById("contact-form").addEventListener("submit",event=>{
-      event.preventDefault();
-      const data=new FormData(event.currentTarget);
-      const text="Hola GUTECH TI, soy "+data.get("nombre")+". Necesito: "+data.get("servicio")+". "+(data.get("mensaje")||"");
-      window.open("https://wa.me/595985676607?text="+encodeURIComponent(text),"_blank","noopener");
-    });
+    const menu=document.querySelector(".menu"),nav=document.querySelector("nav");
+    menu.addEventListener("click",function(){const open=nav.classList.toggle("open");menu.setAttribute("aria-expanded",String(open));menu.textContent=open?"×":"☰"});
+    nav.querySelectorAll("a").forEach(function(link){link.addEventListener("click",function(){nav.classList.remove("open");menu.setAttribute("aria-expanded","false");menu.textContent="☰"})});
+    document.getElementById("contact-form").addEventListener("submit",function(event){event.preventDefault();const data=new FormData(event.currentTarget);const message="Hola GUTECH TI, soy "+data.get("nombre")+". Necesito: "+data.get("servicio")+". "+(data.get("mensaje")||"");window.open("https://wa.me/595985676607?text="+encodeURIComponent(message),"_blank","noopener")});
     document.getElementById("year").textContent=new Date().getFullYear();
   </script>
 </body>
