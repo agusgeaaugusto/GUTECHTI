@@ -12,7 +12,7 @@
   <meta property="og:description" content="Páginas web, sistemas de gestión, control de stock y software a medida.">
   <meta property="og:url" content="https://gutechti.com/">
   <link rel="canonical" href="https://gutechti.com/">
-  <link rel="icon" href="https://gutechti.com/assets/GUTECH_TI_logo_sin_fondo.png?v=be18a931">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=3070a1b4">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
@@ -27,9 +27,9 @@
     :focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
     .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
     header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-    header .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:18px}
+    header .wrap{display:flex;align-items:center;justify-content:space-between;height:92px;gap:22px}
     .logo{display:block;flex:none}
-    .logo img{display:block;width:144px;height:64px;object-fit:contain}
+    .logo img{display:block;width:210px;height:82px;object-fit:contain}
     nav{display:flex;align-items:center;gap:24px;font-weight:600}
     nav a{text-decoration:none;color:var(--mute)}
     nav a:hover{color:var(--blue)}
@@ -43,11 +43,11 @@
     h1{font-size:clamp(38px,5.4vw,64px);font-weight:700;letter-spacing:-.02em}
     .hero p:not(.kicker){max-width:49ch;margin:22px 0 30px;color:var(--mute);font-size:19px}
     .cta{display:flex;gap:12px;flex-wrap:wrap}
-    .hero-card{position:relative;overflow:hidden;min-height:420px;display:grid;place-items:center;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#fff 0%,#eaf7fc 55%,#d6f4fb 100%);box-shadow:0 24px 60px rgba(6,32,46,.12)}
-    .hero-card::before,.hero-card::after{content:"";position:absolute;border-radius:50%;filter:blur(2px)}
+    .hero-card{position:relative;min-height:500px;display:grid;place-items:center;border:0;border-radius:0;background:transparent;box-shadow:none;overflow:visible}
+    .hero-card::before,.hero-card::after{display:none}
     .hero-card::before{width:240px;height:240px;right:-80px;top:-70px;background:rgba(0,184,230,.18)}
     .hero-card::after{width:170px;height:170px;left:-60px;bottom:-50px;background:rgba(232,20,28,.12)}
-    .hero-logo{position:relative;z-index:1;width:min(88%,470px);height:auto}
+    .hero-logo{position:relative;z-index:1;width:min(100%,620px);height:auto;filter:none}
     section{padding:72px 0}
     .alt-bg{background:var(--card);border-block:1px solid var(--line)}
     h2{font-size:clamp(30px,3.8vw,44px);margin-bottom:12px}
@@ -80,19 +80,19 @@
     .wa{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:20;border-radius:99px;background:#1fa855;color:#fff;padding:12px 18px;text-decoration:none;font:600 15px Figtree,sans-serif;box-shadow:0 8px 24px rgba(0,0,0,.3)}
     @media(max-width:860px){
       .hero .wrap,.contact .wrap{grid-template-columns:1fr}
-      .hero-card{min-height:310px}
+      .hero-card{min-height:400px}
       .steps{grid-template-columns:1fr 1fr;gap:28px}
       nav a:not(.btn){display:none}
       .panel ul{columns:1}
       .hero,section{padding:52px 0}
     }
     @media(max-width:540px){
-      .logo img{width:116px}
-      header .wrap{height:68px}
+      .logo img{width:155px;height:68px}
+      header .wrap{height:78px}
       nav .btn{padding:10px 14px;font-size:14px}
       .steps{grid-template-columns:1fr}
       .hero{padding-top:42px}
-      .hero-card{min-height:250px}
+      .hero-card{min-height:330px}
       .wa{right:12px;bottom:12px}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
